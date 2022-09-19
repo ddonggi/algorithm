@@ -1,4 +1,4 @@
-package string;
+package inflearn.string;
 
 /**
  * 대소문자 변환
