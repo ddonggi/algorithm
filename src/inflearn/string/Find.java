@@ -22,9 +22,10 @@ import java.util.Scanner;
 */
 public class Find {
     public int solution(String sentence, char text){
-        char[] characters = sentence.toCharArray();
+//        char[] characters = sentence.toCharArray();
         int count = 0;
-        for(char alphabet:characters){
+        text = Character.toLowerCase(text);
+        for(char alphabet:sentence.toCharArray()){
             if(alphabet==text){
                 count++;
             }
