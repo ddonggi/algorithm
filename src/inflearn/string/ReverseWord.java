@@ -1,5 +1,6 @@
 package inflearn.string;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
@@ -40,6 +41,14 @@ public class ReverseWord {
             System.out.println(reverseWord);
         }
     }
+    public ArrayList<String> solution2(int n, String[] str){
+        ArrayList<String> answer = new ArrayList<>();
+        for(String x : str){// 문자열을 다루는 클래스 중 하나인 String Builder
+            String tmp = new StringBuilder(x).reverse().toString();// Builder 에서 제공하는 Reverse 메서드를 이용
+            answer.add(tmp);
+        }
+        return answer;
+    }
     public static void main(String[] args) {
         ReverseWord reverseWord = new ReverseWord();
         Scanner scan = new Scanner(System.in);
@@ -50,6 +59,10 @@ public class ReverseWord {
             System.out.println((i+1)+"번째 단어를 입력해 주세요");
             wordArray[i]=scan.next();
         }
-        reverseWord.solution(wordArray);
+//        reverseWord.solution(wordArray);
+
+        for(String x: reverseWord.solution2(n,wordArray)){
+            System.out.println(x);
+        }
     }
 }
