@@ -1,9 +1,7 @@
 package inflearn.string;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Stack;
 
 /*
     * 4. 단어 뒤집기
@@ -28,7 +26,7 @@ import java.util.Stack;
         emiT
         giB
     * */
-public class ReverseWord {
+public class Q_4_ReverseWord {
     public void solution(String[] wordArray){
         int wordLength=0;
         for (String word : wordArray) { // 단어 하나씩 순회
@@ -50,7 +48,7 @@ public class ReverseWord {
         return answer;
     }
     public static void main(String[] args) {
-        ReverseWord reverseWord = new ReverseWord();
+        Q_4_ReverseWord reverseWord = new Q_4_ReverseWord();
         Scanner scan = new Scanner(System.in);
         System.out.println("몇 개의 단어를 입력하실 건가요?");
         int n = scan.nextInt();
